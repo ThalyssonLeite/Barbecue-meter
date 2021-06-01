@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    font-family: sans-serif;
+    max-width: 300px;
+    background:rgb(210, 240, 233);
+    margin: auto;
+    padding: 20px;
+    border-radius:15px;
+}
+
+h1 {
+    text-align: center;   
+}
+
+input {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-width: 1.8px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
