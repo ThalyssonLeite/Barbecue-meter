@@ -10,9 +10,9 @@
 
         <div id="container">
             <h1>Barbecuemeter</h1>
-            <input id="adult" oninput="complementAdultsField()" name="adult" type="text" placeholder="Adults">
-            <input id="children" name="children" type="number" placeholder="Children">
-            <input id="duration" name="duration" type="number" placeholder="Duration (hours)">
+            <input onchange="complementAdultsField()" onclick="reset(this)"id="adult" name="adult" type="text" placeholder="Adults">
+            <input onchange="complementChildrenField()" onclick="reset(this)" id="children" name="children" type="text" placeholder="Children">
+            <input onchange="complementDurationField()" onclick="reset(this)" id="duration" name="duration" type="text" placeholder="Duration (hours)">
             <input id="button" onclick="calculate()" type="submit" value="Calculate">
 
             <div id="result">

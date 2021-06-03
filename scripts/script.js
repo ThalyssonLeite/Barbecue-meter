@@ -1,3 +1,8 @@
+let emptyString = "";
+let adults;
+let childrens;
+let duration;
+
 let inputAdults = document.getElementById("adult");
 let inputChildren = document.getElementById("children");
 let inputDuration = document.getElementById("duration");
@@ -6,16 +11,44 @@ let meatResult = document.getElementById("meatResult");
 
 let result = document.getElementById("result");
 
-let totalMeat; 
 let totalAlcoholicBeverage;
 let totalDrinks;
 
 let meatPerPersonInGrams = 0.500;
 let standardBarbecueTime = 5;
 
+
+
+
+function complementAdultsField() {
+    adults = Number(inputAdults.value);
+
+    setTimeout(complement, 1000)
+
+    function complement() {
+        if (inputAdults.value.includes("adults", "Adults") == 0) {
+            inputAdults.value += " Adults"
+        }
+    }
+}
+
+function complementChildrenField() {
+    childrens = Number(inputChildren.value);
+
+    setTimeout(complement, 1000)
+
+    function complement() {
+        if (inputChildren.value.includes("Children") == 0) {
+            inputChildren.value += " Children"
+        }
+    }
+}
+
+function complementDurationField() {
+    i
+}
+
 function calculate() {
-    let adults = Number(inputAdults.value);
-    let childrens = Number(inputChildren.value) / 2;
     let duration = inputDuration.value;
    
     if (duration < 1) {
@@ -35,18 +68,13 @@ function calculate() {
         return (adults + childrens) * meatPerPersonInGrams;
     }
 
-    meatResult.innerHTML = `${totalMeat}Kg de carne`;
+    meatResult.innerHTML = `${totalMeat.toFixed(1)}Kg de carne`;
 }
 
-function complementAdultsField() {
-    let adults = inputAdults.value;
-    if (!(inputAdults.value.includes("adult"))) {
-        setTimeout(complete, 2500)
-    }
-
-    function complete() {
-        inputAdults.value += " adult"
-    }
-    
+function reset(field) {
+    if ((field.value.includes("Adults") || field.value.includes("Children")) || field.value.includes("Hours")) {
+        field.value = "";
+    } 
 }
+
 
