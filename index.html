@@ -10,20 +10,27 @@
 
         <div id="container">
             <h1>Barbecuemeter</h1>
-            <input onchange="complementAdultsField()" onclick="reset(this)"id="adult" name="adult" type="text" placeholder="Adults">
-            <input onchange="complementChildrenField()" onclick="reset(this)" id="children" name="children" type="text" placeholder="Children">
-            <input onchange="complementDurationField()" onclick="reset(this)" id="duration" name="duration" type="text" placeholder="Duration (hours)">
+
+            <!-- adults -->
+            <input onchange="complementAdultsField()" onclick="resetAdults(this)" onselect="reset(this)" id="adult" name="adult" type="text" placeholder="Adults">
+
+            <!-- children -->
+            <input onchange="complementChildrenField()" onclick="resetChildren(this)" onselect="reset(this)" id="children" name="children" type="text" placeholder="Children">
+
+            <!-- duration -->
+            <input onchange="complementDurationField()" onclick="resetDuration(this)" onselect="reset(this)" id="duration" name="duration" type="text" placeholder="Duration (hours)">
+
+            <!-- button -->
             <input id="button" onclick="calculate()" type="submit" value="Calculate">
 
-            <div id="result">
-                <h3>Você vai precisar de:</h3>
+            <h3 id="resultTitle" class="appearWhenPressCalculate"></h3>
 
+            <div id="result" class="appearWhenPressCalculate">
                 <ul>
-                    <li id="meatResult"></li>
-                    <li></li>
-                    <li></li>
+                    <li id="meatField"></li>
+                    <li id="alcoholicField"></li>
+                    <li id="drinksField"></li>
                 </ul>
-
             </div>
 
             <script src="scripts/script.js"></script>
