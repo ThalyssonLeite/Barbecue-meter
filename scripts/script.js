@@ -119,7 +119,7 @@ function checkValues() {
         children = 0;
     }
 
-    if (isNaN(children, adults)) {
+    if (isNaN(children) || isNaN(adults) || isNaN(duration)) {
         resultTitle.innerHTML = "Ooops!"
         meatField.innerHTML = "Please pay atention, fill out the fields using only numbers";
 
