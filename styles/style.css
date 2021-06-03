@@ -12,8 +12,21 @@
     border-radius:15px;
 }
 
+#result {
+    padding-left: 20px;
+}
+
 h1 {
     text-align: center;   
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom:0;
+}
+
+ul {
+    padding-left: 0;
 }
 
 input {

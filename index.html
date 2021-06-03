@@ -10,12 +10,21 @@
 
         <div id="container">
             <h1>Barbecuemeter</h1>
-            <input id="adult" name="adult" type="number" placeholder="Adults">
+            <input id="adult" oninput="complementAdultsField()" name="adult" type="text" placeholder="Adults">
             <input id="children" name="children" type="number" placeholder="Children">
-            <input id="duration" name="duration" type="number" placeholder="Duration">
-            <input id="button" type="submit" value="Calculate">
+            <input id="duration" name="duration" type="number" placeholder="Duration (hours)">
+            <input id="button" onclick="calculate()" type="submit" value="Calculate">
 
-            <div id="result"></div>
+            <div id="result">
+                <h3>Você vai precisar de:</h3>
+
+                <ul>
+                    <li id="meatResult"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
 
             <script src="scripts/script.js"></script>
         </div>
