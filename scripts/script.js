@@ -1,5 +1,7 @@
-// Carne - 500 gramas por pessoa + de 6 horaas - 650 gramas
-// Cerveja - 200 ml por pessoa + 6 horas - 350ml
-// Refrigerante/água - 700ml por pessoa + 6 horas - 1200ml
+let button = document.getElementById("button");
 
-// crianças valem 0.5
+button.addEventListener("click", userAlert)
+function userAlert() {
+    alert("olá")
+}
+
