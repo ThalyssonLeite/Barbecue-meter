@@ -85,7 +85,7 @@ function calculate() {
     if (duration >= standardBarbecueTimeInHours) {
         meatPerPersonInGrams = 0.650;
         alcholicBeveragePerPersonInMilliliters = 0.700;
-        normalDrinksAndWaterInMillimiters = 600;
+        normalDrinksAndWaterInMillimiters = 0.600;
 
     } else {
         meatPerPersonInGrams = 0.500;
